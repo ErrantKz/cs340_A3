@@ -221,3 +221,11 @@ devintr()
   }
 }
 
+uint get_timestamp(void)
+{
+  uint xticks;
+  acquire(&tickslock);
+  xticks=ticks;
+  release(&tickslock);
+  return xticks;
+}

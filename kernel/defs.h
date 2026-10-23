@@ -148,6 +148,7 @@ void            trapinit(void);
 void            trapinithart(void);
 extern struct spinlock tickslock;
 void            prepare_return(void);
+uint            get_timestamp(void);
 
 // uart.c
 void            uartinit(void);
